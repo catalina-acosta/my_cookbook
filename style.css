@@ -48,6 +48,10 @@ label {
 #dropdown {
   display: block;
 }
+select {
+  background-color: #3b3b4f;
+  color: #ffffff;
+}
 
 input,
 textarea,
@@ -55,8 +59,10 @@ select {
   margin: 10px 0 0 0;
   width: 100%;
   min-height: 2em;
+  border-radius: 10px;
 }
 
+  
 input, textarea {
   background-color: #3b3b4f;
   border: 1px solid #3b3b4f;
