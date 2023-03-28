@@ -5,34 +5,38 @@
     <meta content="text">
     <title>Cookbook</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Add a new dish to your cookbook!</h1>
-    <form id="myCookbook" action="post">
-      <fieldset>
-        <label for="dish-name">Dish name: </label>
-        <input type="text" name="dish-name" id="dish-name" required>
-        <label for="main-ingredient">Main ingredient: </label>
-        <input type="text" name="main-ingredient" id="main-ingredient" required>
-        <label for="other-ingredient">Second main ingredient: </label>
-        <input type="text" name="other-ingredient" id="other-ingredient">
-        <label>Type of dish: </label>
-        <select id="dropdown">
-          <option value="0">Please select a type of dish</option>
-          <option value="1">Breakfast</option>
-          <option value="2">Lunch</option>
-          <option value="3">Dessert</option>
-          <option value="4">For guests</option>
-          <option value="5">Snacks</option>
-        </select>
-      </fieldset>
-      <fieldset>
-        <p>Cooking Time:</p>
-        <label for="30-min"><input id="30-min" type="radio" name="cooking-time" class="inline" value="30" /> Less than 30 min</label>
-        <label for="45-min"><input id="45-min" type="radio" name="cooking-time" class="inline" value="45"/> 30 to 45 min</label>
-      </fieldset>
-      <input type="submit" value="Submit">
-    </form>
+    <div>
+      <img src="https://static01.nyt.com/images/2017/09/25/dining/bonebrothchickenstock/bonebrothchickenstock-articleLarge.jpg" alt="cooking ingredients">
+      <form id="myCookbook" action="post">
+        <fieldset>
+          <label for="dish-name">Name: </label>
+          <input type="text" name="dish-name" id="dish-name" required>
+          <label for="main-ingredient">Main ingredient: </label>
+          <input type="text" name="main-ingredient" id="main-ingredient" required>
+          <label for="other-ingredient">Second main ingredient: </label>
+          <input type="text" name="other-ingredient" id="other-ingredient">
+          <label>Type: </label>
+          <select id="dropdown">
+            <option value="0">Please select a type of dish</option>
+            <option value="1">Breakfast</option>
+            <option value="2">Lunch</option>
+            <option value="3">Dessert</option>
+            <option value="4">For guests</option>
+            <option value="5">Snacks</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <p>Cooking Time:</p>
+          <label for="30-min"><input id="30-min" type="radio" name="cooking-time" class="inline" value="30" /> Less than 30 min</label>
+          <label for="45-min"><input id="45-min" type="radio" name="cooking-time" class="inline" value="45"/> 30 to 45 min</label>
+        </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </body>
-</html>
+  </html>
