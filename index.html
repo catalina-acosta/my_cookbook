@@ -16,7 +16,7 @@
           $.ajax({
               url:'https://api.apispreadsheets.com/data/TXjW5GQs5eoD67Jm/',
               type:'post',
-              data:$("#my-cookbook").serializeArray(),
+              data:$("#myCookbook").serializeArray(),
               success: function(){
                 alert("Form Data Submitted :)")
               },
@@ -31,7 +31,7 @@
     <h1>Add a new dish to your cookbook!</h1>
     <div>
       <img src="https://static01.nyt.com/images/2017/09/25/dining/bonebrothchickenstock/bonebrothchickenstock-articleLarge.jpg" alt="cooking ingredients">
-      <form id="myCookbook" action="post">
+      <form id="myCookbook">
         <fieldset>
           <label for="dish-name">Name: </label>
           <input type="text" name="dish-name" id="dish-name" required>
@@ -54,7 +54,7 @@
           <label for="30-min"><input id="30-min" type="radio" name="cooking-time" class="inline" value="30" /> Less than 30 min</label>
           <label for="45-min"><input id="45-min" type="radio" name="cooking-time" class="inline" value="45"/> 30 to 45 min</label>
         </fieldset>
-        <input type="submit" value="Submit">
+        <button onclick='SubForm()'>Submit</button>
       </form>
     </div>
   </body>
