@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script>
+      function SubForm (){
+          $.ajax({
+              url:'https://api.apispreadsheets.com/data/TXjW5GQs5eoD67Jm/',
+              type:'post',
+              data:$("#my-cookbook").serializeArray(),
+              success: function(){
+                alert("Form Data Submitted :)")
+              },
+              error: function(){
+                alert("There was an error :(")
+              }
+            });
+        }
+    </script>
   </head>
   <body>
     <h1>Add a new dish to your cookbook!</h1>
@@ -21,7 +40,7 @@
           <label for="other-ingredient">Second main ingredient: </label>
           <input type="text" name="other-ingredient" id="other-ingredient">
           <label>Type: </label>
-          <select id="dropdown">
+          <select id="dropdown" name="dish-type">
             <option value="0">Please select a type of dish</option>
             <option value="1">Breakfast</option>
             <option value="2">Lunch</option>
